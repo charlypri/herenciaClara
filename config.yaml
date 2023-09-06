@@ -1,0 +1,18 @@
+credentials:
+  usernames:
+    carlos:
+      email: carlos@gmail.com
+      name: Carlos Prieto
+      password: $2b$12$3HTO7P7f7UAh9fwGX8TcxOh9OXJI8.lqxopBYWhjzG7gFVbdNkrOm # To be replaced with hashed password
+      password-og: charlypri
+    elenagaragu:
+      email: elenagaragu@gmail.com
+      name: Elena Garcia
+      password: $2b$12$0JXoG2dOHu6.zD7Xsb7/4u9mhZa4fmBWpPaaA9n9uhh8SA7xM1Uee # To be replaced with hashed password
+cookie:
+  expiry_days: 30
+  key: random_signature_key # Must be string
+  name: random_cookie_name
+preauthorized:
+  emails:
+  - melsby@gmail.com
