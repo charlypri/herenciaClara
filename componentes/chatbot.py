@@ -60,12 +60,12 @@ def chatbot_component():
                 full_response += response.choices[0].delta.get("content", "")
                 message_placeholder.markdown(full_response + "▌")
             message_placeholder.markdown(full_response)
-            st.write(
-                f"El coste de la conversación es de {calculate_cost(st.session_state):.07f} euros"
-            )
+        st.write(
+            f"El coste de la conversación es de {calculate_cost(st.session_state):.07f} euros"
+        )
 
         st.session_state.messages.append(
             {"role": "assistant", "content": full_response}
         )
 
-        st.write(st.session_state)
+        # st.write(st.session_state)
