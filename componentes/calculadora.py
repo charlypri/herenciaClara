@@ -386,20 +386,24 @@ def pregunta_abuelos(hay_testamento):
                         if estaba_casado == "Sí":
                             porcentaje = "25%"
                             personas = 2
-                            calcular_herencia(porcentaje, personas, testamento=True, parentesco="Abuelo")
+                            st.markdown("## Te toca un 1/6")
+                            # calcular_herencia(porcentaje, personas, testamento=True, parentesco="Abuelo")
                         else:
                             porcentaje = "25%"
                             personas = 2
-                            calcular_herencia(porcentaje, personas, testamento=True, parentesco="Abuelo")
+                            st.markdown("## Te toca un 25%")
+                            # calcular_herencia(porcentaje, personas, testamento=True, parentesco="Abuelo")
                     else:
                         if estaba_casado == "Sí":
                             porcentaje = 1/6
                             personas = 2
-                            calcular_herencia(porcentaje, personas, testamento=True, parentesco="Abuelo")
+                            st.markdown("## Te toca un 1/12")
+                            # calcular_herencia(porcentaje, personas, testamento=True, parentesco="Abuelo")
                         else:
                             porcentaje = "25%"
                             personas = 2
-                            calcular_herencia(porcentaje, personas, testamento=True, parentesco="Abuelo")
+                            st.markdown("## Te toca un 1/8")
+                            # calcular_herencia(porcentaje, personas, testamento=True, parentesco="Abuelo")
                 
                 else:
                     st.markdown("""
