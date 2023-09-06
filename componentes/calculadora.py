@@ -265,26 +265,17 @@ def pregunta_padres(hay_testamento):
             if estaba_casado == "Sí" and vive_otro_progenitor == "Sí":
                 porcentaje = 100 / 2
                 personas = 2
-                calcular_herencia(porcentaje, personas, testamento=True, parentesco="Progenitor")
+                # calcular_herencia(porcentaje, personas, testamento=True, parentesco="Progenitor")
+                st.markdown("## Te toca un 1/3 a cada progenitor")
 
             elif estaba_casado == "Sí" and vive_otro_progenitor == "No":
                 porcentaje = 100
                 personas = 1
-                calcular_herencia(porcentaje, personas, testamento=True, parentesco="Progenitor")
+                # calcular_herencia(porcentaje, personas, testamento=True, parentesco="Progenitor")
+                st.markdown("## Te toca un 1/3")
 
             if estaba_casado == "No" and vive_otro_progenitor == "Sí":
-                st.markdown(
-                    """
-                    LEGÍTIMA ESTRICTA: Tiene derecho a la mitad de la herencia, la otra mitad será de libre disposición, que habrá que ver si en el testamento dispuso de ella o no. En el caso de que no hubiese dispuesto de ella, tendría derecho al 100%.
-
-                    Hay que valorar cualquier otra disposición especial como usufructo a favor del cónyuge o cualquier otra disposición especial.
-
-                    *Si desea un asesoramiento más especializado puede ponerse en contacto con nuestros asesores legales para que estudien su caso en concreto y puedan ayudarle en lo que necesite.
-
-                """
-                )
-
-            elif estaba_casado == "No" and vive_otro_progenitor == "No":
+                st.markdown("## Te toca un 1/4")
                 st.markdown(
                     """
                     LEGÍTIMA ESTRICTA: Tiene derecho a un 25% de la herencia.
@@ -294,6 +285,19 @@ def pregunta_padres(hay_testamento):
                     Hay que valorar cualquier otra disposición especial como usufructo a favor del cónyuge o cualquier otra disposición especial.
 
                     *Si desea un asesoramiento más especializado puede ponerse en contacto con nuestros asesores legales para que estudien su caso en concreto y puedan ayudarle en lo que necesite.
+                """
+                )
+
+            elif estaba_casado == "No" and vive_otro_progenitor == "No":
+                st.markdown("## Te toca un 1/2")
+                st.markdown(
+                    """
+                    LEGÍTIMA ESTRICTA: Tiene derecho a la mitad de la herencia, la otra mitad será de libre disposición, que habrá que ver si en el testamento dispuso de ella o no. En el caso de que no hubiese dispuesto de ella, tendría derecho al 100%.
+
+                    Hay que valorar cualquier otra disposición especial como usufructo a favor del cónyuge o cualquier otra disposición especial.
+
+                    *Si desea un asesoramiento más especializado puede ponerse en contacto con nuestros asesores legales para que estudien su caso en concreto y puedan ayudarle en lo que necesite.
+
                 """
                 )
 
@@ -391,7 +395,7 @@ def pregunta_abuelos(hay_testamento):
                         else:
                             porcentaje = "25%"
                             personas = 2
-                            st.markdown("## Te toca un 25%")
+                            st.markdown("## Te toca un 1/4")
                             # calcular_herencia(porcentaje, personas, testamento=True, parentesco="Abuelo")
                     else:
                         if estaba_casado == "Sí":
@@ -402,7 +406,7 @@ def pregunta_abuelos(hay_testamento):
                         else:
                             porcentaje = "25%"
                             personas = 2
-                            st.markdown("## Te toca un 1/8")
+                            st.markdown("## Te toca un 1/4")
                             # calcular_herencia(porcentaje, personas, testamento=True, parentesco="Abuelo")
                 
                 else:
