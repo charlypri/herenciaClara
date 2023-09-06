@@ -6,4 +6,3 @@ componentes/__pycache__
 poetry.lock
 .env
 *.ipynb
-analytics/*
