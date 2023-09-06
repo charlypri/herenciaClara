@@ -323,14 +323,14 @@ def pregunta_abuelos(hay_testamento):
         vive_otro_abuelo_misma_linea = st.radio(
             "¿Vive el otro abuelo de su misma línea?", ("Sí", "No")
         )
-
-        cantidad_abuelos_otra_linea = st.number_input(
-            "¿Cuántos abuelos viven de la otra línea?",
-            min_value=0,
-            max_value=2,
-            value=0,
-            step=1,
-        )
+        if vive_otro_abuelo_misma_linea == "Sí":
+            cantidad_abuelos_otra_linea = st.number_input(
+                "¿Cuántos abuelos viven de la otra línea?",
+                min_value=0,
+                max_value=2,
+                value=0,
+                step=1,
+            )
 
         porcentaje = 100
         personas = 2
