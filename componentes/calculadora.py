@@ -443,6 +443,7 @@ def pregunta_conyuge(hay_testamento):
                 ("Sí", "No"),
             )
             if tiene_ascendientes_vivos == "No":
+                st.markdown("## Te toca un 1/2")
                 st.markdown(""" 
                     Legítima estricta: tiene derecho al usufructo de la mitad de la herencia.
 
@@ -455,8 +456,9 @@ def pregunta_conyuge(hay_testamento):
 
                 porcentaje = 100 / 1
                 personas = 1
-                calcular_herencia(porcentaje, personas, testamento=False, parentesco="Conyuge")
+                # calcular_herencia(porcentaje, personas, testamento=False, parentesco="Conyuge")
             else:
+                st.markdown("## Te tocan 2/3")
                 st.markdown(""" 
                     Legítima estricta: tiene derecho al usufructo de dos tercios de la herencia.
 
@@ -469,8 +471,9 @@ def pregunta_conyuge(hay_testamento):
 
                 porcentaje = 100 / 1
                 personas = 1
-                calcular_herencia(porcentaje, personas, testamento=False, parentesco="Conyuge")
+                # calcular_herencia(porcentaje, personas, testamento=False, parentesco="Conyuge")
         else:
+            st.markdown("## Te toca un 1/3")
             st.markdown(""" Legítima estricta: tiene derecho al usufructo del tercio destinado a la mejora.
                 Tercio de libre disposición: habrá que ver si en el testamento dispuso de ella o no. En el caso de que no hubiese dispuesto de ella.
 
@@ -510,7 +513,9 @@ def pregunta_hermanos(hay_testamento):
                 " ### La herencia le corresponde a su descendiente, ascendiente o cónyuge no separado legalmente o de hecho"
             )
     else:
-        pass
+        st.markdown(
+                " ### No se contempla obligatoriedad a recibir herencia segun la ley"
+            )
 
 
 def pregunta_sobrino(hay_testamento):
@@ -548,7 +553,9 @@ def pregunta_sobrino(hay_testamento):
             st.markdown(" ### No te corresponde ninguna herencia")
 
     else:
-        pass
+        st.markdown(
+                " ### No se contempla obligatoriedad a recibir herencia segun la ley"
+            )
 
 
 def pregunta_colaterales(hay_testamento):
@@ -582,7 +589,9 @@ def pregunta_colaterales(hay_testamento):
             st.markdown(" ### No te corresponde ninguna herencia")
 
     else:
-        pass
+        st.markdown(
+                " ### No se contempla obligatoriedad a recibir herencia segun la ley"
+            )
 
 
 def pregunta_otros(hay_testamento):
@@ -592,4 +601,6 @@ def pregunta_otros(hay_testamento):
         )
 
     else:
-        pass
+        st.markdown(
+                " ### No se contempla obligatoriedad a recibir herencia segun la ley"
+            )
