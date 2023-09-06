@@ -20,7 +20,7 @@ def calcular_herencia(porcentajes, personas, testamento, parentesco):
             "Tercio de Libre Disposición",
             "Tercio de Libre Disposición",
         ]
-        st.markdown("## Repartimiento por tercios")
+        st.markdown("## Reparto por tercios")
         col1, col2, col3 = st.columns(3)
         with col1:
             fig1 = px.pie(values=porcentajes, names=nombres, title="Tercio Estricta")
@@ -44,7 +44,7 @@ def calcular_herencia(porcentajes, personas, testamento, parentesco):
             )
             st.plotly_chart(fig3, use_container_width=True)
 
-        st.markdown("## Repartimiento total de la herencia")
+        st.markdown("## Reparto total de la herencia")
         partes = []
         porcentajes = []
         for persona in range(personas):
@@ -60,13 +60,13 @@ def calcular_herencia(porcentajes, personas, testamento, parentesco):
         fig1 = px.pie(
             values=porcentajes,
             names=partes,
-            title="Repartimiento de Herencia",
+            title="Reparto de Herencia",
         )
         st.plotly_chart(fig1, use_container_width=True)
 
     else:
         fig = px.pie(
-            values=porcentajes, names=nombres, title="Repartimiento de Herencia"
+            values=porcentajes, names=nombres, title="Reparto de Herencia"
         )
         st.plotly_chart(fig)
 
